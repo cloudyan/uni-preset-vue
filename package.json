@@ -1,5 +1,6 @@
 {
   "name": "uni-preset-vue",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev:app": "uni -p app",
@@ -29,31 +30,80 @@
     "build:mp-weixin": "uni build -p mp-weixin",
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
-    "build:quickapp-webview-union": "uni build -p quickapp-webview-union"
+    "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
+    "prepare": "husky install",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx,.vue",
+    "lint:fix": "eslint --fix src --ext .js,.jsx,.ts,.tsx,.vue",
+    "commit": "npx git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "test": "echo test"
   },
   "dependencies": {
-    "@dcloudio/uni-app": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-app-plus": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-components": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-h5": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-mp-alipay": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-mp-baidu": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-mp-kuaishou": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-mp-lark": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-mp-qq": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-mp-toutiao": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3040420220402002",
+    "@dcloudio/uni-app": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-app-plus": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-components": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-h5": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-alipay": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-baidu": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-kuaishou": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-lark": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-qq": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-toutiao": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-mp-weixin": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-quickapp-webview": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-ui": "^1.4.12",
+    "@deepjs/uni-ccui": "^0.3.17",
+    "@deepjs/uni-storage": "^0.3.8",
+    "axios": "^0.26.1",
+    "lru-cache": "^7.5.1",
+    "url-parse": "^1.5.10",
     "vue": "^3.2.31",
     "vue-i18n": "^9.1.9",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@dcloudio/types": "^2.5.19",
-    "@dcloudio/uni-automator": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/uni-cli-shared": "3.0.0-alpha-3040420220402002",
-    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3040420220402002",
-    "typescript": "^4.6.3",
-    "vite": "^2.9.1"
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/prompt-cli": "^16.2.3",
+    "@dcloudio/types": "^2.5.17",
+    "@dcloudio/uni-automator": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/uni-cli-shared": "^3.0.0-alpha-3040120220308001",
+    "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3040120220308001",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/parser": "^5.15.0",
+    "autoprefixer": "^10.4.2",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.0",
+    "node-sass": "^7.0.1",
+    "prettier": "^2.6.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "Android >= 4",
+    "ios >= 8"
+  ],
+  "uni-app": {
+    "scripts": {
+      "mp-dingtalk": {
+        "title": "钉钉小程序",
+        "env": {
+          "UNI_PLATFORM": "mp-alipay"
+        },
+        "define": {
+          "MP-DINGTALK": true
+        }
+      }
+    }
   }
 }

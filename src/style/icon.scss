@@ -1,0 +1,47 @@
+// 将 iconfont 生成的 css 直接拷贝覆盖到 iconfont.scss 即可
+@import "./iconfont.css";
+// @import "./xxxfont.css";
+
+// iconfont文件里面包含 iconfont.ttf、iconfont.css， 将 iconfont.ttf文件转位 base64。
+// 推荐转换工具地址：https://www.giftofspeed.com/base64-encoder/
+// svg 压缩 https://jakearchibald.github.io/svgomg/
+// 如需要逆编译 iconfont 可使用 https://icomoon.io/
+
+// .iconfont {
+//   position: relative;
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-family: "iconfont" !important;
+//   /* font-size: 32rpx; */
+//   font-style: normal;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   font-size: inherit;
+//   text-rendering: auto;
+//   line-height: 1;
+// }
+
+.iconfont {
+  // width: 32rpx;
+  // height: 32rpx;
+}
+
+.iconfont::before {
+  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  // font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: inherit;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.iconfont.is-spin::before {
+  animation: spin 1.2s linear infinite;
+}

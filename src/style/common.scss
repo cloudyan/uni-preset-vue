@@ -1,0 +1,52 @@
+
+.page-padding {
+  padding: 20rpx 40rpx;
+}
+.page-fixed--bottom {
+  padding-bottom: 200rpx;
+}
+
+.intro {
+  margin: 20rpx 0 48rpx;
+
+  &__title {
+    margin-bottom: 20rpx;
+    font-size: 48rpx;
+    font-weight: bold;
+  }
+  &__desc {
+    margin-bottom: 20rpx;
+    font-size: 24rpx;
+    color: #666;
+  }
+}
+
+.form__picker-date {
+  flex: 1;
+
+  & + & {
+    margin-left: 20rpx;
+  }
+  .textarea {
+    white-space: nowrap;
+  }
+}
+
+.block-action.fixed--bottom {
+  padding: 20rpx 40rpx;
+  background: #fff;
+  box-shadow: 0 0px 30px 20px white;
+
+  .textarea-number {
+    position: absolute;
+    top: -60rpx;
+    right: 40rpx;
+    background: white;
+    box-shadow: -5px 0 5px 3px white;
+
+    &--current {
+      color: $uni-color-primary;
+    }
+  }
+}
+
